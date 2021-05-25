@@ -18,8 +18,8 @@ class OffersController < ApplicationController
     else
       render :new
     end
-  end  
-  
+  end
+
   def show
     @offer = Offer.find(params[:id])
   end
@@ -27,6 +27,6 @@ class OffersController < ApplicationController
   private
 
   def offer_params
-    params.require(:offer).permit(:offer_type, :description, :offer_img, :sport_type, :price, :address)
+    params.require(:offer).permit(:offer_type, :description, :offer_img, :sport_type, :price, :address, :name)
   end
 end
