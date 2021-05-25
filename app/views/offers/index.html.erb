@@ -5,7 +5,8 @@
 
 <div>
   <% @offers.each do |offer| %>
-  <h2><%= link_to offer.sport_type, offer_path(offer)%></h2>
+  <h2><%= link_to offer.name, offer_path(offer) %></h2>
+  <p><%= offer.sport_type %></p>
   <p><%= offer.description %></p>
   <% end %>
 </div>
