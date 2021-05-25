@@ -14,6 +14,7 @@ user = User.create(name: "Armen", password: "1234567", email: "arkooo@gmail.com"
 puts "#{user.name}"
 10.times do
   offer = Offer.new(
+    name: Faker::Coin.name,
     offer_type: ["equipment", "facility"].sample,
     description: Faker::Books::Lovecraft.sentence(word_count: 8),
     offer_img: Faker::LoremFlickr.image(size: "50x60", search_terms: ['sports']),
