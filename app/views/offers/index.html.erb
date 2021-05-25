@@ -1,0 +1,11 @@
+<div>
+  <h1>Offers</h1>
+  <p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Exercitationem, sunt, repellat. Quam mollitia blanditiis, iste et suscipit doloremque officiis id aliquid aut quidem sit laudantium accusantium totam recusandae, est nemo!</p>
+</div>
+
+<div>
+  <% @offers.each do |offer| %>
+  <h2><%= offer.sport_type %></h2>
+  <p><%= offer.description %></p>
+  <% end %>
+</div>
