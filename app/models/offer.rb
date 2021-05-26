@@ -8,4 +8,6 @@ class Offer < ApplicationRecord
   validates :sport_type, inclusion: { in: SPORT_TYPES, message: "Please choose one from the list." }
   validates :price, length: { in: 1..100 }
   validates :price, numericality: { only_integer: true }
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
