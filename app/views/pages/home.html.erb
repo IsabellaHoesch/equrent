@@ -1,4 +1,26 @@
-<h1>LandingPage</h1>
-<p>Tea and Armen are done.</p>
-<%= link_to "All offers", offers_path %>
-<%= link_to "Create an offer", new_offer_path %>
+
+
+  <%= video_tag "cover_video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: 'banner'%>
+   <div class="container">
+    <div id="banner-content">
+      <h1> Save money, rent sport equipment from people near you!</h1>
+ <a class="btn btn-info" href="#">>>> Explore</a>
+    </div>  
+    
+    <div class="w-75" id="about-us">
+      <h2>>>> About us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+       mollit anim id est laborum</p>
+    </div>
+
+  <div id="home-buttons">
+    <%= link_to "All offers", offers_path, class: 'btn btn-info' %>
+    <%= link_to "Create an offer", new_offer_path, class: 'btn btn-info'  %>
+    </div>
+  </div>
+
