@@ -1,0 +1,53 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+  
+#banner-content {
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  top: 50vh;
+}
+
+#banner-content h1 {
+  background-color:white;
+  font-size: 28px; 
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.video {  
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+#about-us h2 {
+  font-size: 24px;
+}
+
+#about-us {
+  margin-top: 40px;
+}
+
+#about-us p {
+  margin-top: 20px;
+}
+
+#home-buttons {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
