@@ -13,14 +13,15 @@ Offer.destroy_all
 user = User.create(name: "Armen", password: "1234567", email: "arkooo@gmail.com", profile_img: "", description: "In thee end")
 puts "#{user.name}"
 10.times do
+  sport = ["basketball", "football", "volleyball", "ping-pong", "ski", "hiking", "kanu", "rackets", "treeclimbing"].sample
   offer = Offer.new(
     name: Faker::Coin.name,
     offer_type: ["equipment", "facility"].sample,
     description: Faker::Books::Lovecraft.sentence(word_count: 8),
-    offer_img: Faker::LoremFlickr.image(size: "50x60", search_terms: ['sports']),
-    sport_type: ["basketball", "football", "volleyball", "ping-pong", "ski", "hiking", "kanu", "rackets", "treeclimbing"].sample,
+    offer_img: Faker::LoremFlickr.image(size: "300x100", search_terms: [sport]),
+    sport_type: sport,
     price: rand(1..30),
-    address: Faker::Address.street_address,
+    address: ["Implerstrasse 40, München", "Kaufingerstraße 2, München", "Sonnenstraße 13, München", "Linkstraße 108, München", "Augustenstraße 4, München", "Tengstraße 14, München"].sample,
     longitude: "",
     latitude: "",
     user: user
