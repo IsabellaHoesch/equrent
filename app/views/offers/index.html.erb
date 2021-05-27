@@ -17,6 +17,16 @@
     </div>
   </div>
 
+  <%= form_tag offers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "sport"
+    %>
+    <%= select_tag :sport, options_for_select(@dropdown) %>    
+    <%= submit_tag "Search by sport", class: "btn btn-primary" %>
+  <% end %>
+
   <div class="main-container">
     <div class="cards">
       <% @offers.each do |offer| %>
