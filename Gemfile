@@ -25,15 +25,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-<<<<<<< HEAD
 
-# gem for authorization
-gem 'pundit'
-
-=======
 # for Authorization
 gem 'pundit'
->>>>>>> dc9e6fb7288d739e8e1c61d48cc7bc0738584664
+
 # installed faker
 gem 'faker'
 

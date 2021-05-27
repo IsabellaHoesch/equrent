@@ -4,8 +4,6 @@ class OfferPolicy < ApplicationPolicy
       scope.all
     end
   end
-<<<<<<< HEAD
-=======
 
   def index?
     return true
@@ -26,5 +24,4 @@ class OfferPolicy < ApplicationPolicy
   def update?
     record.user == user
   end
->>>>>>> dc9e6fb7288d739e8e1c61d48cc7bc0738584664
 end
