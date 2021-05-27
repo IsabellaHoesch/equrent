@@ -31,6 +31,10 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:id])
   end
 
+  def edit
+
+  end
+
   private
 
   def offer_params
