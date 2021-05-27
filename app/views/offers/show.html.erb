@@ -13,7 +13,7 @@
   </div>
     
   <div>
-    <img src="<%= @offer.offer_img %>">
+  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
     <h3>>>> <%= @offer.description %></h3>
     <p><strong>Price: </strong><%= @offer.price %></p>
     <p><u>Contact <%=@offer.user.name %></u></p>
