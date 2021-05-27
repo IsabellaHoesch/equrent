@@ -4,19 +4,21 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :offer_type %>
-    <%= f.input :description, as: :text %>
-    <%= f.input :offer_img %>
-    <%= f.input :sport_type %>
-    <%= f.input :price, input_html: { type: 'number' } %>
-    <%= f.input :address %>
+    <%= f.input :name, placeholder: 'What are you selling?', label:false %>
+    <%= f.input :offer_type, collection: %w(equipment facility), label:false %>
+    <%= f.input :description, as: :text, placeholder: 'Enter a short description of your item', label:false %>
+    <%= f.input :offer_img, as: :string %>
+    <%= f.input :sport_type, hint: 'Select your gear', collection: %w(basketball football volleyball ping-pong ski hiking kanu rackets treeclimbing), label:false %>
+    <%= f.input :price, placeholder: 'Enter your price', input_html: { type: 'number' }, label:false %>
+    <%= f.input :address, placeholder: 'Maistr. 5, Berlin', label:false %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-primary'  %>
   </div>
 <% end %>
-<%= link_to "All offers", offers_path %>
-<%= link_to "Home", '/' %>
+  <div class="text-center">
+    <%= link_to "All offers", offers_path, class: 'btn btn-info' %>
+    <%= link_to "Home", '/', class: 'btn btn-info' %>
+  </div>
 </div>
