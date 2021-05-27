@@ -1,13 +1,21 @@
 <div class= "container">  
 
-  <div>
-    <h1>Equipment close to you!</h1>
-    <p>Rent outdoor equipment from people near you! 
-      <br> We offer equipments ranging from P like Ping-Pong rackets to Z like Zorb Football - a team sport in which players are encased in an inflated bubble called Zorb.
-      <br> Rent out your equipment to sport-enthusiasts near you and make some cash with Equrent today!</p>
+  <div id="offers-title">
+    <div>
+      <h1>Equipment close to you!</h1>
+      <p>We offer equipments ranging from P like Ping-Pong rackets to Z like Zorb Football 
+      <br/>- a team sport in which players are encased in an inflated bubble called Zorb.
+      <br/> Rent out your equipment to sport-enthusiasts near you and make some cash with Equrent today!</p>
+    </div>
+
+    <div id="btn-place-add">
+      <%= link_to "Place your add", new_offer_path, class: "button btn btn-info mb-3" %>
+        <div id='text-ad'>
+          <p>Rent outdoor equipment from people near you!</p>
+        </div>
+    </div>
   </div>
 
-  <%= link_to "Create an offer", new_offer_path, class: "button btn btn-outline-secondary mb-3" %>
   <div class="main-container">
     <div class="cards">
       <% @offers.each do |offer| %>
