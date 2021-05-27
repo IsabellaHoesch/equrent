@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class= "container">
 
   <div>
@@ -14,7 +13,7 @@
   </div>
     
   <div>
-  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @offer.photo.key, height: 300, width: 1000, crop: :fit %>
     <h3>>>> <%= @offer.description %></h3>
     <p><strong>Price: </strong><%= @offer.price %></p>
     <p><u>Contact <%=@offer.user.name %></u></p>
@@ -25,26 +24,5 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
-
-
 </div>
-=======
-<%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
 
-<div>
-  <h2><%= @offer.name %></h2>
-  <h3><%= @offer.sport_type %></h3>
-  <p><strong>Description: </strong><%= @offer.description %></p>
-  <p><strong>Price: </strong><%= @offer.price %></p>
-  <p><strong>Where: </strong><%= @offer.address %></p>
-  <p><%= @offer.offer_img %></p>
-</div>
-<%= link_to 'All offers', offers_path %>
-<%= link_to "Create an offer", new_offer_path %>
-<%= link_to "Edit the offer", edit_offer_path %>
-<%= link_to "Delete #{@offer.name}",
-            offer_path(@offer),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
->>>>>>> master
