@@ -3,11 +3,10 @@ class OffersController < ApplicationController
 
   def index
     @offers = Offer.all
-    @dropdown = Offer::SPORT_TYPES.clone 
+    @dropdown = Offer::SPORT_TYPES.clone
     @dropdown.push(nil)
     @dropdown.reverse!
-  
-    # search bar - by sport 
+    # search bar - by sport
     if params[:query].present? && params[:sport].present?
       sql_query = "name ILIKE :query AND sport_type ILIKE :sport"
       @offers = Offer.where(sql_query, query: "%#{params[:query]}%", sport:  "%#{params[:sport]}%")
@@ -32,9 +31,8 @@ class OffersController < ApplicationController
     end
   end
 
-
   def new
-      @offer = Offer.new
+    @offer = Offer.new
   end
 
   def create
