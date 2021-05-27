@@ -1,24 +1,24 @@
-<div class="container">
-<%= simple_form_for(@offer) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name, placeholder: 'What are you selling?', label:false %>
-    <%= f.input :offer_type, collection: %w(equipment facility), label:false %>
-    <%= f.input :description, as: :text, placeholder: 'Enter a short description of your item', label:false %>
-    <%= f.input :offer_img, as: :string %>
-    <%= f.input :sport_type, hint: 'Select your gear', collection: %w(basketball football volleyball ping-pong ski hiking kanu rackets treeclimbing), label:false %>
-    <%= f.input :price, placeholder: 'Enter your price', input_html: { type: 'number' }, label:false %>
-    <%= f.input :address, placeholder: 'Maistr. 5, Berlin', label:false %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-primary'  %>
-  </div>
-<% end %>
-  <div class="text-center">
-    <%= link_to "All offers", offers_path, class: 'btn btn-info' %>
-    <%= link_to "Home", '/', class: 'btn btn-info' %>
-  </div>
+<div class="container center">
+  <div class="d-flex flex-column justify-content-center text-left float-none">
+    <div class="d-flex justify-content-between align-middle border-bottom p-2 mb-2">
+      <h2>Upload your item</h2>
+      <%= link_to "Back to offers", offers_path, class: 'btn btn-light p-2 mb-2 text-muted border' %>
+    </div>
+    <div>
+    <%= simple_form_for(@offer) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <%= f.input :name, placeholder: 'What are you selling?', label:false %>
+        <%= f.input :description, as: :text, placeholder: 'Enter a short description of your item', label:false %>
+        <%= f.input :offer_type, hint: 'Select your offer type', collection: %w(equipment facility), label:false %>
+        <%= f.input :sport_type, hint: 'Select your gear', collection: %w(basketball football volleyball ping-pong ski hiking kanu rackets treeclimbing), label:false %>
+        <%= f.input :price, placeholder: 'Enter your price', input_html: { type: 'number' }, label:false %>
+        <%= f.input :offer_img, as: :string %>
+        <%= f.input :address, placeholder: 'Maistr. 5, Berlin', label:false %>
+        <div>
+          <%= f.button :submit, class: 'btn-light p-2 mb-2 text-muted border'  %>
+        </div>
+    <% end %>
+    </div>
+   </div>
 </div>

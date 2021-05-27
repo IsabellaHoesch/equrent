@@ -1,15 +1,24 @@
-@use postcss-preset-env {
-  stage: 0
-}
-
-div {
-  padding: 2px 2px;
-}
-
-body {
-  min-height: 100vh;
-  display: grid;
+.container {
   align-items: center;
+  padding: 50px 50px;
+  margin: 20px 20px;
+  font-size: 12px;
+  width: 60%;
+  min-height: 100vh;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.d-flex{
+  padding: 5px 5px;
+  margin-bottom: 10px;
 }
 
 #form-inputs {
@@ -26,7 +35,7 @@ body {
   }
 }
 
-#form-inputs {
+#bottom {
   border: none;
   border-radius: .25rem;
   padding: .75rem 1rem;
