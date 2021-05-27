@@ -50,7 +50,25 @@ class OffersController < ApplicationController
   def show
     @offer = Offer.find(params[:id])
     authorize @offer
+
+    # @markers = 
+    #   {
+    #     lat: @offer.latitude,
+    #     lng: @offer.longitude,
+    #     image_url: helpers.asset_url('200w.webp')
+    #   }
   end
+
+
+    # offer = @offer.geocoded.map
+    # @markers = 
+    #   {
+    #     lat: offer.latitude,
+    #     lng: offer.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: { offer: offer }),
+    #     image_url: helpers.asset_url('200w.webp')
+    #   }
+
 
   def edit
     @offer = Offer.find(params[:id])
