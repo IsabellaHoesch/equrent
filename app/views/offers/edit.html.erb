@@ -1,0 +1,21 @@
+<div>
+  <%= form_for(@offer) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :offer_type %>
+    <%= f.text_field :offer_type %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :offer_img %>
+    <%= f.text_field :offer_img %>
+    <%= f.label :sport_type %>
+    <%= f.text_field :sport_type %>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <%= f.submit %>
+  <% end %>
+  <%= link_to "Back", offer_path %>
+</div>
+
