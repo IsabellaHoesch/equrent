@@ -13,8 +13,8 @@
         <%= f.input :offer_type, hint: 'Select your offer type', collection: %w(equipment facility), label:false %>
         <%= f.input :sport_type, hint: 'Select your gear', collection: %w(basketball football volleyball ping-pong ski hiking kanu rackets treeclimbing), label:false %>
         <%= f.input :price, placeholder: 'Enter your price', input_html: { type: 'number' }, label:false %>
-        <%= f.input :offer_img, as: :string %>
         <%= f.input :address, placeholder: 'Maistr. 5, Berlin', label:false %>
+        <%= f.input :offer_img, as: :string %>
         <div>
           <%= f.button :submit, class: 'btn-light p-2 mb-2 text-muted border'  %>
         </div>
