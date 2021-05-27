@@ -1,10 +1,10 @@
-<div class= "container">  
+<div class= "container">
 
 
   <div id="offers-title">
     <div>
       <h1>Equipment close to you!</h1>
-      <p>We offer equipments ranging from P like Ping-Pong rackets to Z like Zorb Football 
+      <p>We offer equipments ranging from P like Ping-Pong rackets to Z like Zorb Football
       <br/>- a team sport in which players are encased in an inflated bubble called Zorb.
       <br/> Rent out your equipment to sport-enthusiasts near you and make some cash with Equrent today!</p>
     </div>
@@ -23,14 +23,14 @@
       class: "form-control",
       placeholder: "sport"
     %>
-    <%= select_tag :sport, options_for_select(@dropdown) %>    
+    <%= select_tag :sport, options_for_select(@dropdown) %>
     <%= submit_tag "Search by sport", class: "btn btn-primary" %>
   <% end %>
 
   <div class="main-container">
     <div class="cards">
       <% @offers.each do |offer| %>
-        <div class="card">
+        <div class="card <%= "d-none" if offer.bookings.present? %>">
           <img src="<%= offer.offer_img %>">
           <div class="card-product-infos">
             <h3 id="btn-title"><%= link_to offer.name, offer_path(offer) %></h3>
