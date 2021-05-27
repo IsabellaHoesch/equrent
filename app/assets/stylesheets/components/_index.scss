@@ -5,6 +5,10 @@
 @import "form";
 @import "map";
 
+#btn-place-add {
+  text-align: right;
+}
+
 #map{
   width: 100%;
 }
@@ -19,10 +23,10 @@
 }
 
 .card {
-  height: 120px;
+  height: 150px;
   background: white;
-  border-radius: 1px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   font-size: 22px;
@@ -36,22 +40,60 @@
 }
 
 .card img {
-  width: 30%;
-  height: 80%;
-  padding-left: 8px;
-  padding-right: 8px;
+  width: 50%;
+  height: 100%;
+  // padding-left: 8px;
+  padding-right: 25px;
+  object-fit: cover;
+}
+
+.card:hover {
+  opacity: 0.8;
 }
 
 .cards {
   flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 20px;
+  grid-gap: 15px;
   margin-right: 16px;
-  text-align: center;
+  text-align: left;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+#offers-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+// #btn-title {
+//   // position: absolute;
+//   margin-left: -50px;
+// }
+
+.card-product-infos {
+  position: relative;
+}
+
+#card-content {
+  margin-top: 10px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-end;
+  // position: relative;
 }
 
 
+#offers-title p {
+  font-size: 12px;
+}
 
 
 @media(max-width: 992px ){
@@ -70,11 +112,11 @@ body {
   margin: 0;
   font-family: 'Varela Round', sans-serif;
   font-size: 18px;
-  background: #F4F4F4;
+  background: #f7f7f7;
 }
 p {
   font-weight: lighter;
-  font-size: 8px;
+  font-size: 12px;
   margin-bottom: 8px;
 }
 h1, h2, h3 {
