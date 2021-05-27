@@ -38,7 +38,10 @@
     color: black;
   }
 }
-
+.transparent-card {
+  background-color: #c8c2bc;
+  color: rgb(11, 11, 11);
+}
 .card img {
   width: 45%;
   height: 100%;
@@ -85,7 +88,7 @@
 
 // #card-content {
 //   margin-top: 10px;
-//   display: flex; 
+//   display: flex;
 //   justify-content: space-between;
 //   align-items: flex-end;
 //   // position: relative;
