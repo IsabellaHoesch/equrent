@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'pundit'
 # installed faker
 gem 'faker'
+# installed cloudinary for image upload
+gem 'cloudinary', '~> 1.16.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
