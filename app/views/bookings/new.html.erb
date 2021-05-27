@@ -1,0 +1,6 @@
+<%= simple_form_for [ @offer, @booking ] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :price %>
+  <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+<% end %>

@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
 }
@@ -15,7 +15,9 @@
 
 #banner-content h1 {
   background-color:white;
-  font-size: 28px; 
+  font-size: 30px; 
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .banner p {
@@ -24,16 +26,6 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-
-.video {  
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
 
 #about-us h2 {
   font-size: 24px;

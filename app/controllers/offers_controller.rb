@@ -6,7 +6,6 @@ class OffersController < ApplicationController
     @dropdown = Offer::SPORT_TYPES.clone
     @dropdown.push(nil)
     @dropdown.reverse!
-
     # search bar - by sport
     if params[:query].present? && params[:sport].present?
       sql_query = "name ILIKE :query AND sport_type ILIKE :sport"
