@@ -1,8 +1,27 @@
 class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @offers = Offer.all
+    @dropdown = Offer::SPORT_TYPES.clone 
+    @dropdown.push(nil)
+    @dropdown.reverse!
+  
+    # search bar - by sport 
+    if params[:query].present? && params[:sport].present?
+      sql_query = "name ILIKE :query AND sport_type ILIKE :sport"
+      @offers = Offer.where(sql_query, query: "%#{params[:query]}%", sport:  "%#{params[:sport]}%")
+    elsif params[:sport].present?
+      sql_query = "sport_type ILIKE :sport"
+      @offers = Offer.where(sql_query, sport:  "%#{params[:sport]}%")
+    elsif params[:query].present?
+      sql_query = "name ILIKE :query"
+      @offers = Offer.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
 
+    # geomapping
     @markers = @offers.geocoded.map do |offer|
       {
         lat: offer.latitude,
@@ -13,8 +32,9 @@ class OffersController < ApplicationController
     end
   end
 
+
   def new
-    @offer = Offer.new
+      @offer = Offer.new
   end
 
   def create

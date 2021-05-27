@@ -7,6 +7,18 @@
       <br> Rent out your equipment to sport-enthusiasts near you and make some cash with Equrent today!</p>
   </div>
 
+
+  <%= form_tag offers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "sport"
+    %>
+    <%= select_tag :sport, options_for_select(@dropdown) %>    
+    <%= submit_tag "Search by sport", class: "btn btn-primary" %>
+  <% end %>
+  <!-- the list of movies -->
+
   <%= link_to "Create an offer", new_offer_path, class: "button btn btn-outline-secondary mb-3" %>
   <div class="main-container">
     <div class="cards">
