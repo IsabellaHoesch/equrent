@@ -96,7 +96,7 @@ offer.photo.attach(io: file, filename: '12.png', content_type: 'image/png')
 offer.save
 
 photo13 = "https://www.ispo.com/sites/default/files/styles/content_width_phone/public/2018-07/Protest_SS18_Action_Indonesia_020.jpg?itok=9SRvQ8cd"
-offer = Offer.new(name: "Climbing shoes", offer_type: "Equipment", description: "Climbing shoes, size 39", sport_type: "Climbing", address: "Augustenstr 10, München", offer_img: "#{photo13}", price: 5, user: user2)
+offer = Offer.new(name: "Standup paddle board", offer_type: "Equipment", description: "Standup paddle board, for rrelaxation and meditation", sport_type: "SUP", address: "Augustenstr 10, München", offer_img: "#{photo13}", price: 5, user: user2)
 file = URI.open("#{photo13}")
 offer.photo.attach(io: file, filename: '13.png', content_type: 'image/png')
 offer.save
@@ -127,7 +127,5 @@ offer = Offer.new(name: "My beautiful spikeball", offer_type: "Equipment", descr
 file = URI.open("#{photo18}")
 offer.photo.attach(io: file, filename: '14.png', content_type: 'image/png')
 offer.save
-
-
 
 puts "Successfully seeeeeeeeeeeedeeeeeeeeeeeed xD"
