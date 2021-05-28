@@ -29,32 +29,42 @@
     </div>
   </div>
 
+
+  <%= form_tag offers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "sport"
+    %>
+    <%= select_tag :sport, options_for_select(@dropdown) %>
+    <%= submit_tag "Search by sport", class: "btn btn-primary" %>
+  <% end %>
   <div class="main-container">
     <div class="cards">
       <% @offers.each do |offer| %>
-        <div class="card <%= "transparent-card" if offer.bookings.present? %>">
+        <div class="card <%= "d-none" if offer.bookings.present? %>">
+          <% if offer.photo.attached? %>
           <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+          <%= image_tag 'sports_img.jpg', height: 300, width: 400, crop: :fill %>
+          <% end %>
           <div class="card-product-infos">
             <h3 id="btn-title"><%= link_to offer.name, offer_path(offer) %></h3>
            <div id="card-content">
-
-                <p><%= offer.sport_type %></p>
-                <p><%= offer.description %></p>
-                <h3><%= offer.price %> €</h3>
+              <p><%= offer.sport_type %></p>
+              <p><%= offer.description %></p>
+              <h3><%= offer.price %> €</h3>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-
     <div id="map"
       style="width: 100%; height: 600px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-
   </div>
-
 </div>
 
 
