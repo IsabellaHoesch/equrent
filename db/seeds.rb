@@ -47,7 +47,7 @@ offer.photo.attach(io: file, filename: '3.png', content_type: 'image/png')
 offer.save
 photo4 = "https://img.nauticexpo.de/images_ne/photo-g/21298-8942020.jpg"
 offer = Offer.new(name: "Kanu - 2 people", offer_type: "Equipment", description: "kanu with paddles", sport_type: "Kanu", address: "Elisabethstr 4, München", offer_img: "#{photo4}", price: 10, user: user1)
-file = URI.open("#{photo2}")
+file = URI.open("#{photo4}")
 offer.photo.attach(io: file, filename: '4.png', content_type: 'image/png')
 offer.save
 photo5 = "https://www.gophersport.com/cmsstatic/img/615/G-86263-SpikeProVolleyBallSystem-SET-001-clean.jpg?medium"
@@ -80,4 +80,54 @@ offer = Offer.new(name: "Skating", offer_type: "Equipment", description: "Disco-
 file = URI.open("#{photo10}")
 offer.photo.attach(io: file, filename: '10.png', content_type: 'image/png')
 offer.save
+
+#isa
+
+photo11 = "https://www.switchbacktravel.com/sites/default/files/image_fields/Best%20Of%20Gear%20Articles/Skiing/Backcountry%20Skis/Backcountry%20Skis%20(DPS%20Lotus).jpg"
+offer = Offer.new(name: "Skating", offer_type: "Equipment", description: "Touring skis, only one season old.", sport_type: "Skiing", address: "Hiltenspergerstr 15, München", offer_img: "#{photo11}", price: 10, user: user2)
+file = URI.open("#{photo11}")
+offer.photo.attach(io: file, filename: '11.png', content_type: 'image/png')
+offer.save
+
+photo12 = "https://m.media-amazon.com/images/I/71FEmfDYZ2L._AC_UL1500_.jpg"
+offer = Offer.new(name: "Climbing shoes", offer_type: "Equipment", description: "Climbing shoes, size 39", sport_type: "Climbing", address: "Augustenstr 20, München", offer_img: "#{photo12}", price: 15, user: user2)
+file = URI.open("#{photo12}")
+offer.photo.attach(io: file, filename: '12.png', content_type: 'image/png')
+offer.save
+
+photo13 = "https://www.ispo.com/sites/default/files/styles/content_width_phone/public/2018-07/Protest_SS18_Action_Indonesia_020.jpg?itok=9SRvQ8cd"
+offer = Offer.new(name: "Climbing shoes", offer_type: "Equipment", description: "Climbing shoes, size 39", sport_type: "Climbing", address: "Augustenstr 10, München", offer_img: "#{photo13}", price: 5, user: user2)
+file = URI.open("#{photo13}")
+offer.photo.attach(io: file, filename: '13.png', content_type: 'image/png')
+offer.save
+
+photo14 = "https://www.rogueeurope.eu/media/catalog/product/cache/5/image/1500x1500/9df78eab33525d08d6e5fb8d27136e95/s/p/spike-ball-th.jpg"
+offer = Offer.new(name: "Spikeball kit", offer_type: "Equipment", description: "Spikeball - fun to play with friends!", sport_type: "Spikeball", address: "Schleißheimerstr 0, München", offer_img: "#{photo14}", price: 25, user: user1)
+file = URI.open("#{photo14}")
+offer.photo.attach(io: file, filename: '14.png', content_type: 'image/png')
+offer.save
+
+photo15 = "https://windsurf.de/media/image/1a/0a/23/JP_AllroundAir_2021_SL_600x600@2x.jpg"
+offer = Offer.new(name: "My second SUP", offer_type: "Equipment", description: "Borrow my SUP if you want", sport_type: "SUP", address: "Schertlinstr.19, München", offer_img: "#{photo15}", price: 55, user: user2)
+file = URI.open("#{photo15}")
+offer.photo.attach(io: file, filename: '15.png', content_type: 'image/png')
+offer.save
+photo16 = "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRUztWtsiJcnDh5Mv8F2GmO-xc-ZFA0mV_ROEqSHnFakbhpAP2RfqFiudv67Q&usqp=CAc"
+offer = Offer.new(name: "My brothers Surfboard", offer_type: "Equipment", description: "My brother left town, contact me if you want to rent his surfboard. he got other stuff too", sport_type: "Surfboard", address: "Max-Weber-Platz 5, München", offer_img: "#{photo16}", price: 80, user: user2)
+file = URI.open("#{photo16}")
+offer.photo.attach(io: file, filename: '16.png', content_type: 'image/png')
+offer.save
+photo17 = "https://static.bergzeit.de/out/pictures-imago/generated/product/2d/dd/610x610/5006532-001_pic1_kong-herren-gipsy-klemmgerat-set-4-6_kong-herren-gipsy-klemmgerat-set-4-6.jpg"
+offer = Offer.new(name: "Climbing hooks", offer_type: "Equipment", description: "Come play with my climbing gear. I barely find time to use it, but its perfect for climbing. Rent it!", sport_type: "Climbing", address: "Bayerstraße 15, München", offer_img: "#{photo17}", price: 50, user: user2)
+file = URI.open("#{photo17}")
+offer.photo.attach(io: file, filename: '17.png', content_type: 'image/png')
+offer.save
+photo18 = "https://pimage.sport-thieme.de/detail-fillscale-webp/spikeball-pro/133-5617"
+offer = Offer.new(name: "My beautiful spikeball", offer_type: "Equipment", description: "Use my spikeball set. I never used it but I heard its great fun", sport_type: "Spikeball", address: "Hauptstr. 8, Kühlenthal", offer_img: "#{photo18}", price: 50, user: user2)
+file = URI.open("#{photo18}")
+offer.photo.attach(io: file, filename: '14.png', content_type: 'image/png')
+offer.save
+
+
+
 puts "Successfully seeeeeeeeeeeedeeeeeeeeeeeed xD"

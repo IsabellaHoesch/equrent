@@ -32,7 +32,7 @@
   
   <div class="main-container">
     <div class="cards">
-      <% @offers[0..6].each do |offer| %>
+      <% @offers[0..5].each do |offer| %>
         <div class="card <%= "d-none" if offer.bookings.present? %>">
           <% if offer.photo.attached? %>
           <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
