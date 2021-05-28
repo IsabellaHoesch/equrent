@@ -1,33 +1,18 @@
-.container_form {
-  align-items: center;
-  padding: 50px 50px;
-  margin: 20px 20px;
+.container-form {
+  padding: 20px 20px;
   font-size: 12px;
   width: 60%;
-  min-height: 100vh;
+  margin: auto;
 }
 
-.center {
-  margin: auto;
-  // width: 50%;
-  border: 1px solid lightgrey;
-  padding: 10px;
+.form-border{
   margin-top: 30px;
   margin-bottom: 30px;
+  border: 1px solid lightgrey;
 }
 
-.d-flex{
-  padding: 5px 5px;
-  margin-bottom: 10px;
-}
-
-#form-inputs {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#bottom {
-  border: none;
-  border-radius: .25rem;
-  padding: .75rem 1rem;
+#upload {
+  padding: 10px;
+  padding-top: 20px;
+  vertical-align: middle;
 }
