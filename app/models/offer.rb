@@ -1,6 +1,6 @@
 class Offer < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_one_attached :photo
   SPORT_TYPES = %w(basketball football volleyball ping-pong ski hiking kanu rackets treeclimbing)
   validates :offer_type, :name, :description, :address, :price, :sport_type, presence: true

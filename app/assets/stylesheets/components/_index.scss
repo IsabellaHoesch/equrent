@@ -38,7 +38,10 @@
     color: black;
   }
 }
-
+.transparent-card {
+  background-color: #c8c2bc;
+  color: rgb(11, 11, 11);
+}
 .card img {
   width: 45%;
   height: 100%;
@@ -54,7 +57,7 @@
 .cards {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 0.7fr 0.7fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
   margin-right: 16px;
   text-align: left;
@@ -85,7 +88,7 @@
 
 // #card-content {
 //   margin-top: 10px;
-//   display: flex; 
+//   display: flex;
 //   justify-content: space-between;
 //   align-items: flex-end;
 //   // position: relative;

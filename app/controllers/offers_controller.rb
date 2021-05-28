@@ -51,12 +51,12 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:id])
     authorize @offer
 
-    # @markers = 
-    #   {
-    #     lat: @offer.latitude,
-    #     lng: @offer.longitude,
-    #     image_url: helpers.asset_url('200w.webp')
-    #   }
+    @markers = 
+      [{
+        lat: @offer.latitude,
+        lng: @offer.longitude,
+        image_url: helpers.asset_url('200w.webp')
+      }]
   end
 
 
