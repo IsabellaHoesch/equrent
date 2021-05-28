@@ -1,21 +1,18 @@
-.container_form {
-  align-items: center;
-  padding: 10px 10px;
-  margin: 10px 10px;
+.container-form {
+  padding: 20px 20px;
   font-size: 12px;
   width: 60%;
-  min-height: 100vh;
+  margin: auto;
 }
 
-.center {
-  margin: auto;
-  // width: 50%;
+.form-border{
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 1px solid lightgrey;
-  padding: 10px;
 }
 
 #upload {
-  width: 60%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  vertical-align: middle;
 }

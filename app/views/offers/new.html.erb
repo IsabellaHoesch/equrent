@@ -1,5 +1,7 @@
-<div id="upload" class="container d-flex justify-content-between container text-center">
-  <h2>Upload your item</h2>
-  <%= link_to "Back to offers", offers_path, class: 'btn btn-light p-2 mb-2 text-muted border' %>
+<div class="container container-form form-border">
+  <div id="upload" class="d-flex justify-content-between align-middle">
+    <h2>Upload your item</h2>
+    <%= link_to "Back to Offers", offers_path, class: 'btn btn-light p-2 mb-2 text-muted border' %>
+  </div>
+  <%= render 'form' %>
 </div>
-<%= render 'form' %>
