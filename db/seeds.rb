@@ -34,14 +34,16 @@ puts "User 2: #{user2.name}"
 #   puts "#{offer.sport_type} created."
 # end
 
-offer = Offer.new(name: "Ping-pong rackets", offer_type: "equipment", description: "2 years old but still great", sport_type: "ping-pong", address: "Hessstrasse 13, München", offer_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdWgqXDkSu9eZ7YrSwRd-cZz8QwG1iTH03sA&usqp=CAU", price: 10, user: user1)
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdWgqXDkSu9eZ7YrSwRd-cZz8QwG1iTH03sA&usqp=CAU')
-offer.photo.attach(io: file, filename: '1.png', content_type: 'image/png')
+photo1 = "https://heidelberger-tv.de/wp-content/uploads/miguel-teirlinck-VDkRsT649C0-unsplash_Volleyball-1-1080x675.jpg"
+offer = Offer.new(name: "Great volleyball", offer_type: "equipment", description: "needs air pumping", sport_type: "volleyball", address: "Schleißheimer Straße 60, München", offer_img: "#{photo1}", price: 20, user: user1)
+file = URI.open("#{photo1}")
+offer.photo.attach(io: file, filename: '2.png', content_type: 'image/png')
 offer.save
 
-offer = Offer.new(name: "Great volleyball", offer_type: "equipment", description: "needs air pumping", sport_type: "volleyball", address: "Schleißheimer Straße 60, München", offer_img: "https://heidelberger-tv.de/wp-content/uploads/miguel-teirlinck-VDkRsT649C0-unsplash_Volleyball-1-1080x675.jpg", price: 20, user: user1)
-file = URI.open('https://heidelberger-tv.de/wp-content/uploads/miguel-teirlinck-VDkRsT649C0-unsplash_Volleyball-1-1080x675.jpg')
-offer.photo.attach(io: file, filename: '2.png', content_type: 'image/png')
+photo2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdWgqXDkSu9eZ7YrSwRd-cZz8QwG1iTH03sA&usqp=CAU"
+offer = Offer.new(name: "Ping-pong rackets", offer_type: "equipment", description: "2 years old but still great", sport_type: "ping-pong", address: "Hessstrasse 13, München", offer_img: "#{photo2}", price: 10, user: user1)
+file = URI.open("#{photo2}")
+offer.photo.attach(io: file, filename: '1.png', content_type: 'image/png')
 offer.save
 
 # Offer.create(name: "2-person tent", offer_type: "equipment", description: "feels like a villa", sport_type: "hiking", address: "Prinzregentenplatz 13, München", offer_img: "https://media.glampinghub.com/CACHE/images/accommodations/panorama-tented-pool-villas-koyao-island-resort-1501153263635/0c1c97bd8e06e559480e06f6f4579362.jpg", price: 50, user: user1)
