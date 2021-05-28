@@ -4,12 +4,14 @@
  
    <div class="container">
     <div id="banner-content">
-      <h1> Save money, rent sport equipment from people near you!</h1>
-       <a class="btn btn-primary" href="#">Explore</a>
+      <h1>
+        <span id="banner-typed-text"></span>
+      </h1>
+       <%= link_to "Check sport equipment and facilities", offers_path, class: 'btn btn-primary' %>
     </div>  
     
     <div class="w-75" id="about-us">
-      <h2>>>> About us</h2>
+      <h2>About us</h2>
       <p>
       Equrent is an outdoor experience company with a mission to create a world where you can experience the outdoors sustainably. Rent premium outdoor gear with delivery anywhere in the world.
       You acknowledge that you will not use any Arrive equipment in any way other than for its intended use.
@@ -17,8 +19,30 @@
     </div>
 
     <div id="home-buttons">
-      <%= link_to "All offers", offers_path, class: 'btn btn-primary' %>
-      <%= link_to "Create an offer", new_offer_path, class: 'btn btn-primary' %>
+      <%= link_to "Show all offers", offers_path, class: 'btn btn-primary' %>
+      <%= link_to "Place your add", new_offer_path, class: 'btn btn-primary' %>
     </div>
+
+    <h2>Latest offers</h2>
+  
+  <div class="main-container">
+    <div class="cards">
+      <% @offers[0..6].each do |offer| %>
+        <div class="card <%= "d-none" if offer.bookings.present? %>">
+          <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
+          <div class="card-product-infos">
+            <h3 id="btn-title"><%= link_to offer.name, offer_path(offer) %></h3>
+           <div id="card-content">
+              
+                <p><%= offer.sport_type %></p>
+                <p><%= offer.description %></p>
+                <h3><%= offer.price %> €</h3>
+            </div>
+          </div>
+        </div>
+      <% end %>      
+    </div>
+
+
   </div>
 
