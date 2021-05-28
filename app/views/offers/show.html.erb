@@ -6,13 +6,15 @@
     </div>
     <div> 
       <%= link_to 'All offers', offers_path, class: 'btn btn-primary' %>
-      <%= link_to "Create an offer", new_offer_path, class: 'btn btn-primary' %>
-      <%= link_to "Edit the offer", edit_offer_path, class: 'btn btn-primary' %>
-      <%= link_to 'Book', new_offer_booking_path(@offer), class: 'btn btn-primary' %>
-      <%= link_to "Delete #{@offer.name}",
-            offer_path(@offer),
-            method: :delete,
-            data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+      <% if current_user %>
+        <%= link_to "Create an offer", new_offer_path, class: 'btn btn-primary' %>
+        <%= link_to "Edit the offer", edit_offer_path, class: 'btn btn-primary' %>
+        <%= link_to 'Book', new_offer_booking_path(@offer), class: 'btn btn-primary' %>
+        <%= link_to "Delete #{@offer.name}",
+              offer_path(@offer),
+              method: :delete,
+              data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+        <% end %>
     </div>
   </div>
     
