@@ -34,7 +34,11 @@
     <div class="cards">
       <% @offers[0..6].each do |offer| %>
         <div class="card <%= "d-none" if offer.bookings.present? %>">
+          <% if offer.photo.attached? %>
           <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+          <%= image_tag 'sports_img.jpg', height: 300, width: 400, crop: :fill %>
+          <% end %>
           <div class="card-product-infos">
             <h3 id="btn-title"><%= link_to offer.name, offer_path(offer) %></h3>
            <div id="card-content">
